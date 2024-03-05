@@ -10,7 +10,7 @@
             <input type="text" formControlName="name" class="form-control">
         </div>
         <div class="col-auto">
-            <span>Algo de informacion</span>
+            <span customLabel [color]="color" [errors]="myForm.get('name')?.errors"></span>
         </div>
     </div>
     <div class="row">
@@ -24,6 +24,7 @@
 
 
 <pre>
+
     {{myForm.get('name')?.errors | json}}
 </pre>
 <div>
